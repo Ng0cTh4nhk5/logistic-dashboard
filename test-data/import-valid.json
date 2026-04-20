@@ -1,0 +1,38 @@
+{
+  "company": {
+    "name": "Import Test Co",
+    "industry": "cooking-oil",
+    "country": "VN",
+    "scale": "small",
+    "annualRevenue": 100000000,
+    "employeeCount": 10,
+    "channels": ["wholesale"],
+    "coverageArea": "local"
+  },
+  "products": [
+    { "id": "p1", "name": "Test Oil 1L", "weight": 0.92, "unit": "kg", "packType": "bottle", "pricePerUnit": 35000 }
+  ],
+  "nodes": [
+    { "id": "n1", "name": "Test Factory", "type": "factory", "address": "HCMC" },
+    { "id": "n2", "name": "Test Customer", "type": "customer", "address": "Hanoi" }
+  ],
+  "routes": [
+    {
+      "id": "r1", "fromId": "n1", "toId": "n2",
+      "distance": 1700, "distanceUnit": "km",
+      "transportMode": "truck-heavy", "carrier": "3pl",
+      "frequency": 4, "frequencyUnit": "per-month",
+      "costPerTrip": 5000000, "volumePerTrip": 20, "volumeUnit": "ton"
+    }
+  ],
+  "costCategories": [
+    { "id": "c01", "group": "transportation", "name": "Fuel", "enabled": true, "monthlyCost": 50000000 }
+  ],
+  "preferences": {
+    "currency": "VND",
+    "currencySymbol": "₫",
+    "weightUnit": "ton",
+    "distanceUnit": "km",
+    "dashboardTitle": "Test Import Dashboard"
+  }
+}

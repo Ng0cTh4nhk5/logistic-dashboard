@@ -1,0 +1,20 @@
+{
+  "company": { "name": "Bad Refs Co", "industry": "other", "country": "US", "scale": "small" },
+  "products": [{ "id": "p1", "name": "Test", "weight": 1, "unit": "kg", "packType": "bottle", "pricePerUnit": 1 }],
+  "nodes": [
+    { "id": "n1", "name": "Factory A", "type": "factory", "address": "Somewhere" }
+  ],
+  "routes": [
+    {
+      "id": "r1", "fromId": "n1", "toId": "NONEXISTENT_NODE",
+      "distance": 100, "distanceUnit": "km",
+      "transportMode": "truck-heavy", "carrier": "in-house",
+      "frequency": 5, "frequencyUnit": "per-month",
+      "costPerTrip": 1000, "volumePerTrip": 10, "volumeUnit": "ton"
+    }
+  ],
+  "costCategories": [
+    { "id": "c01", "group": "transportation", "name": "Fuel", "enabled": true, "monthlyCost": 5000 }
+  ],
+  "preferences": { "currency": "USD", "currencySymbol": "$", "weightUnit": "ton", "distanceUnit": "km", "dashboardTitle": "Bad Refs Test" }
+}
